@@ -4,7 +4,7 @@ reflections = {
 	"i'd": "you would",
 	"i've": "you have",
 	"i'll": "you will",
-	"you": "me", # check this... me or I??
+	"you": "me", # check this... me or I
 	"you've": "I have",
 	"you'll": "I will",
 	"you'd": "I would",
