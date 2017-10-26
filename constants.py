@@ -1,5 +1,5 @@
 
-reflections = {
+reflections_dict = {
 	"i": "you",
 	"i'd": "you would",
 	"i've": "you have",
@@ -19,14 +19,15 @@ reflections = {
 	"were": "was" # check this
 }
 
-patterns = [
-	[]
-
-
-
-
-
+patterns_list = [
+	[r'i need (.*)',
+	["Why do you need {0}?",
+	"Would it really help you to get {0}?",
+	"Are you sure you need {0}?"]]
 ]
+
+
+
 
 
 
