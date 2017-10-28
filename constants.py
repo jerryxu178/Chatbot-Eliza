@@ -11,6 +11,10 @@ patterns_list = [
 	["Why do you need {0}?",
 	"Would it really help you to get {0}?",
 	"Are you sure you need {0}?"]]
+
+
+
+	
 ]
 
 
