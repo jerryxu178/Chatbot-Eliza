@@ -3,6 +3,9 @@ import random
 from constants import reflections_dict, patterns_list
 
 def generate_response(statement):
+"""
+documentation here
+"""
 	for pattern, responses in patterns_list:
 		re.match(pattern, statement.rstrip(".!?"))
 
