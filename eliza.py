@@ -7,7 +7,12 @@ def reflect(fragment):
 	"""
 	documentation here
 	"""
-	return fragment
+	word_list = fragment.split(" ")
+	for index in range(len(word_list)):
+		word = word_list[index]
+		if word in reflections_dict:
+			word_list[index] = reflections_dict[word]
+	return " ".join(word_list)
 
 def generate_response(statement):
 	"""
