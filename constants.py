@@ -7,10 +7,15 @@ pattern that may match the user's statement and also a list of responses that
 the chatbot choose from to echo back the user's original statement.
 """
 patterns_list = [
-	[r'i need (.*)',
-	["Why do you need {0}?",
-	"Would it really help you to get {0}?",
-	"Are you sure you need {0}?"]]
+	(r'i need (.*)', # NOTE: switch to tuple here? need to update documentation
+	["Why do you need {}?", # NOTE: changed {0} -> {}
+	"Would it really help you to get {}?",
+	"Are you sure you need {}?"]),
+
+	(r'why don\'?t you ([^\?]*)\??',
+		["Do you really think I don't {}?",
+		"Perhaps eventually I will {}.",
+		"Do you really want me to {}?"])
 
 
 
