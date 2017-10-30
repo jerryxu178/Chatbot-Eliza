@@ -2,9 +2,9 @@
 """
 patterns_list contains the patterns that the chatbot needs for pattern matching.
 
-patterns_list is implemented as a list of lists, where each element contains a 
-pattern that may match the user's statement and also a list of responses that
-the chatbot choose from to echo back the user's original statement.
+patterns_list is implemented as a list of tuples, where the first element of 
+each tuple is a pattern that may match the user's statement and the second
+element is a list of responses that the chatbot may choose from.
 """
 patterns_list = [
 	(r'i need (.*)', # NOTE: switch to tuple here? need to update documentation
