@@ -6,12 +6,13 @@ patterns_list is implemented as a list of tuples, where the first element of
 each tuple is a pattern that may match the user's statement and the second
 element is a list of responses that the chatbot may choose from.
 """
+
 patterns_list = [
-	(r'i need (.*)', # NOTE: switch to tuple here? need to update documentation
-	["Why do you need {}?", # NOTE: changed {0} -> {}
+	(r'i need (.*)', 
+	["Why do you need {}?", 
 	"Would it really help you to get {}?",
 	"Are you sure you need {}?"]),
-"""
+
 	(r'why don\'?t you ([^\?]*)\??',
 		["Do you really think I don't {}?",
 		"Perhaps eventually I will {}.",
@@ -35,7 +36,7 @@ patterns_list = [
 		"How long have you been {}?",
 		"How do you feel about being {}?"]),
 
-	(r'i\'?m (.*))',
+	(r'i\'?m (.*)',
 		["How does being {} make you feel?",
 		"Do you enjoy being {}?",
 		"Why do you tell me you're {}?",
@@ -149,11 +150,6 @@ patterns_list = [
 		"It's likely that there is {}.",
 		"Would you like there to be {}?"]),
 
-	(r'my (.*)',
-		["I see, your {}.",
-		"Why do you say that your {}?",
-		"When your {}, how do you feel?"]), # TEST THIS ONE
-
 	(r'you (.*)',
 		["We should be discussing you, not me.",
 		"Why do you say that about me?",
@@ -201,11 +197,8 @@ patterns_list = [
 		"Good-bye.",
 		"Thank you, that will be $150.  Have a good day!"]),
 
-
-
-	# add patterns here
-
-
+	(r'foo',
+		["foo to you too!"]),
 
 	(r'(.*)',
 		["Please tell me more.",
@@ -218,26 +211,26 @@ patterns_list = [
 		"I see.  And what does that tell you?",
 		"How does that make you feel?",
 		"How do you feel when you say that?"])
-"""
 ]
-
-
-	
-
 
 
 """
 reflections_dict is a dictionary that the chatbot uses to convert words so that
 statements that are echoed back to the user make sense.
 
-MORE EXPLANATION HERE. MAYBE AN EXAMPLE
+Example: 
+Suppose the user input is "the wallet is mine". The chatbot will use
+reflections_dict to convert "mine"->"yours" in order to generate the response
+"Is the wallet really yours?"
+
 """
+
 reflections_dict = {
 	"i": "you",
 	"i'd": "you would",
 	"i've": "you have",
 	"i'll": "you will",
-	"you": "me", # check this... me or I
+	"you": "me", 
 	"you've": "I have",
 	"you'll": "I will",
 	"you'd": "I would",
@@ -245,15 +238,10 @@ reflections_dict = {
 	"yours": "mine",
 	"me": "you",
 	"my": "your",
-	"mine": "yours", # check this 
+	"mine": "yours", 
 	"am": "are",
 	"are": "am",
 	"was": "were",
-	"were": "was" # check this
+	"were": "was" 
 }
-
-
-
-
-
 
