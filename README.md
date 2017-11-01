@@ -7,8 +7,8 @@ Chatbot-Eliza is a chatbot that simulates a Rogerian psychotherapist by using pa
 ### Prerequisites
 To run Chatbot-Eliza, you will need two things:
 
--Python 2.7
--Git (recommended)
+- Python 2.7
+- Git (recommended)
 
 ### Running the Chatbot
 
